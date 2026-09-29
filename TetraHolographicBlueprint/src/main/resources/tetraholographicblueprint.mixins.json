@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.pycoder.tetraholographicblueprint.client.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "refmap": "tetraholographicblueprint.refmap.json",
+  "client": [
+    "WorkbenchScreenMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
