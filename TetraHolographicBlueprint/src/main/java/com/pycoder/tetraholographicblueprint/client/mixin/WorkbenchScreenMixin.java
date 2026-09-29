@@ -28,6 +28,9 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import se.mickelus.tetra.blocks.workbench.WorkbenchTile;
+import se.mickelus.tetra.blocks.workbench.gui.GuiActionList;
+import se.mickelus.tetra.blocks.workbench.gui.GuiModuleList;
+import se.mickelus.tetra.blocks.workbench.gui.GuiSlotDetail;
 import se.mickelus.tetra.blocks.workbench.gui.WorkbenchScreen;
 import se.mickelus.tetra.module.schematic.CraftingContext;
 
@@ -35,9 +38,9 @@ import se.mickelus.tetra.module.schematic.CraftingContext;
 public abstract class WorkbenchScreenMixin {
     @Shadow(remap = false) @Final private WorkbenchTile tileEntity;
     @Shadow(remap = false) @Final private GuiElement defaultGui;
-    @Shadow(remap = false) @Final private GuiElement moduleList;
-    @Shadow(remap = false) @Final private GuiElement actionList;
-    @Shadow(remap = false) @Final private GuiElement slotDetail;
+    @Shadow(remap = false) @Final private GuiModuleList moduleList;
+    @Shadow(remap = false) @Final private GuiActionList actionList;
+    @Shadow(remap = false) @Final private GuiSlotDetail slotDetail;
 
     @Unique
     private BlueprintSession tetraHolographicBlueprint$session;
