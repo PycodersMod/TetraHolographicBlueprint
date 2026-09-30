@@ -27,3 +27,7 @@
 | Java Package | com.pycoder.tetraholographicblueprint |
 
 Mod ID、Registry Namespace 和存档标识保持原值。工程目录、Gradle group、Java package 和 GitHub 仓库名属于工程组织信息。
+
+## License
+
+This project is licensed under the MIT License. See [LICENSE](./LICENSE).
