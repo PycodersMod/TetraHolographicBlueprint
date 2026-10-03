@@ -3,8 +3,7 @@ package com.pycoder.tetraholographicblueprint.client.blueprint;
 import java.util.Objects;
 
 /**
- * Applies the product rule that separates a blueprint's full cost from the
- * materials this player still needs to collect.
+ * 按乘法原理将蓝图总材料成本与玩家仍需收集的材料分开计算。
  */
 public final class BlueprintMaterialCalculator {
     private BlueprintMaterialCalculator() {

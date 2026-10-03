@@ -4,7 +4,7 @@ import net.minecraft.world.item.ItemStack;
 import se.mickelus.tetra.module.schematic.OutcomePreview;
 import se.mickelus.tetra.module.schematic.UpgradeSchematic;
 
-/** Reads material costs through Tetra's schematic API without inventing quantities. */
+/** 通过 Tetra 蓝图 API 读取材料成本，不推测或补造数量。 */
 public final class TetraMaterialManifestReader {
     private TetraMaterialManifestReader() {
     }

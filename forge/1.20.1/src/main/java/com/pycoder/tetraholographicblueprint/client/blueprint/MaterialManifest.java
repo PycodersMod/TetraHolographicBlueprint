@@ -55,8 +55,8 @@ public final class MaterialManifest {
     }
 
     /**
-     * Returns the part of this manifest that is not already satisfied by another manifest.
-     * Quantities never become negative, and neither input manifest is mutated.
+     * 返回尚未由另一份清单满足的部分。
+     * 数量不会变为负数，也不会修改任一输入清单。
      */
     public MaterialManifest remainingAfter(MaterialManifest satisfied) {
         Objects.requireNonNull(satisfied, "satisfied");

@@ -2,7 +2,7 @@ package com.pycoder.tetraholographicblueprint.client.compat;
 
 import java.awt.Color;
 
-/** Reimplements the color operation used by Tetra's removed Mutil helper. */
+/** 重新实现 Tetra 已移除的 Mutil 辅助类所提供的颜色运算。 */
 public final class MutilColorCompat {
     private MutilColorCompat() {
     }

@@ -17,14 +17,14 @@ import java.util.List;
 import java.util.Objects;
 import java.util.Set;
 
-/** Runtime catalog of Tetra schematics and their target-specific preview data. */
+/** Tetra 蓝图的运行时目录及其针对目标物品的预览数据。 */
 public final class TetraSchematicCatalog {
     private TetraSchematicCatalog() {
     }
 
     /**
-     * Reads the registry at call time, so later-loaded addon/data-pack schematics
-     * are included without a hard-coded mod list.
+     * 在调用时读取注册表，因此后续加载的附属模组或数据包蓝图
+     * 也会自动包含在内，无需硬编码模组列表。
      */
     public static List<UpgradeSchematic> allRegisteredSchematics() {
         Collection<UpgradeSchematic> registered = SchematicRegistry.getAllSchematics();
@@ -38,18 +38,16 @@ public final class TetraSchematicCatalog {
     }
 
     /**
-     * Evaluates every registered schematic against every occupied module slot
-     * of the supplied target. Each preview keeps its own material slots and
-     * processing conditions; entries are never merged across slots.
+     * 将每个已注册蓝图与目标物品中所有已占用的模块槽位逐一匹配。
+     * 每条预览保留各自的材料槽位和加工条件，不会合并不同槽位的条目。
      */
     public static List<TetraSchematicPreviewEntry> evaluateForTool(ItemStack target) {
         return ToolSchematicCatalog.evaluate(target, false);
     }
 
     /**
-     * Evaluates only the schematics Tetra considers previewable in the supplied
-     * context. This is the entry point for GUI display and keeps hidden or
-     * unavailable schematics out of the visible list.
+     * 仅计算 Tetra 在给定上下文中判定为可预览的蓝图。
+     * 此方法供图形界面显示使用，隐藏或不可用的蓝图不会出现在列表中。
      */
     public static List<TetraSchematicPreviewEntry> evaluateForContext(
             CraftingContext context,

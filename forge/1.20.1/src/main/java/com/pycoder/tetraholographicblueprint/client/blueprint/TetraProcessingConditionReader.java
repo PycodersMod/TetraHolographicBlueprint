@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-/** Reads processing requirements through Tetra's own schematic API. */
+/** 通过 Tetra 自身的蓝图 API 读取加工要求。 */
 public final class TetraProcessingConditionReader {
     private TetraProcessingConditionReader() {
     }
